@@ -52,7 +52,7 @@ button.selected {
 
 .question-container,
 .options-container {
-  flex: 1; /* Take up equal space */
+  flex: 1; 
   padding: 20px;
   box-sizing: border-box;
   display: flex;
@@ -77,8 +77,8 @@ button.selected {
   border-radius: 5px;
   justify-content: center;
   background-color: #322bf0;
-  overflow: hidden; /* Ensure no overflow is visible */
-  position: relative; /* For positioning the animation pseudo-element */
+  overflow: hidden; 
+  position: relative; 
 }
 
 /* Styling for each button option */
@@ -93,17 +93,16 @@ button.selected {
   border-radius: 5px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   position: relative;
-  transition: color 0.3s, background-color 0.3s, transform 0.3s; /* Smooth color transitions and 3D effect */
+  transition: color 0.3s, background-color 0.3s, transform 0.3s; 
   overflow: hidden;
 }
 
 /* Hover effect for the buttons */
 .options button:hover {
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  transform: translateY(-2px); /* 3D hover effect */
+  transform: translateY(-2px); 
 }
 
-/* App.css */
 
 /* Pseudo-element for the vertical white line */
 .options button::before {
@@ -114,8 +113,8 @@ button.selected {
   width: 5px;
   height: 100%;
   background-color: white;
-  z-index: 1; /* Ensure it is above the button text */
-  transition: width 0.8s, left 0.3s; /* Smooth transition for width and left */
+  z-index: 1; 
+  transition: width 0.8s, left 0.3s; 
 }
 
 /* Pseudo-element for the animated background */
@@ -127,26 +126,26 @@ button.selected {
   width: 100%;
   height: 100%;
   background-color: white;
-  transition: left 2.5s; /* Increase the duration for a smoother transition */
-  z-index: 0; /* Ensure it is behind the button text */
+  transition: left 2.5s; 
+  z-index: 0; 
 }
 
 /* Selected button styling */
 .options button.selected::before {
-  width: 0; /* Collapse the white line */
-  left: 0; /* Ensure the left position is 0 */
+  width: 0; 
+  left: 0; 
 }
 
 .options button.selected::after {
   background-color: white;
-  left: 0; /* Move the animated background to cover the button */
+  left: 0; 
 }
 
 /* Selected button styling */
 .options button.selected {
-  background-color: white; /* Change the background color to white */
-  color: blue; /* Change the text color to blue */
-  z-index: 1; /* Ensure the text is above the animation */
+  background-color: white; 
+  color: blue; 
+  z-index: 1; 
 }
 
 /* Styling for the progress bar */
@@ -184,24 +183,24 @@ button.selected {
 }
 
 .navigation button {
-  padding: 5px 10px; /* Smaller padding for a "small and cute" look */
-  font-size: 0.9em; /* Slightly smaller font size */
+  padding: 5px 10px; 
+  font-size: 0.9em; 
   font-weight: bold;
   cursor: pointer;
   border: none;
   border-radius: 5px;
-  transition: background-color 0.3s, color 0.3s; /* Smooth color transitions */
+  transition: background-color 0.3s, color 0.3s; 
 }
 
 .navigation button.clicked {
-  background-color: blue; /* Blue background for the clicked Next button */
-  color: white; /* White text for the clicked Next button */
+  background-color: blue; 
+  color: white; 
 }
 
 .navigation button[disabled] {
-  background-color: #f5f5f5; /* Light gray background for disabled buttons */
-  color: #aaa; /* Gray text for disabled buttons */
-  cursor: not-allowed; /* Indicate the button is not clickable */
+  background-color: #f5f5f5; 
+  color: #aaa; 
+  cursor: not-allowed; 
 }
 
 .selected {
