@@ -8,6 +8,9 @@ const Question = ({ question, onAnswer, selectedAnswer }) => {
     onAnswer(option.isCorrect, option.label);
   };
 
+  // Array of labels for options
+  const optionLabels = ['A', 'B', 'C', 'D'];
+
   return (
     <div className="question">
       <div className="question-container">
@@ -20,7 +23,8 @@ const Question = ({ question, onAnswer, selectedAnswer }) => {
             onClick={() => handleOptionClick(option)}
             className={selectedOption === option.label ? 'selected' : ''}
           >
-            {option.label}
+            {/* Display label from optionLabels array */}
+            {optionLabels[index]}. {option.label}
           </button>
         ))}
       </div>

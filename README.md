@@ -5,9 +5,10 @@ Created a Quiz-App in both Website view and Resposive view(Mobile View)
 ## Features Added
 
 1. Added Previous and Next Button
-2. Answer selection by candidate
-3. Summary of the score points in last page of the apllication once questions are answered.
-4. Coding is re-usable for future requirements
+2. Answer selection by candidate himself/herself
+3. Shuffling of questions as been added once quiz is completed.
+4. Summary of the score points can be viewed in last page of the aplication once questions are answered.
+5. Coding is re-usable for future requirements
 
 ## Installation
 

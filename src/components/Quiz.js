@@ -13,8 +13,21 @@ const Quiz = () => {
   const [clickedPrevious, setClickedPrevious] = useState(false);
 
   useEffect(() => {
-    setQuestions(questionsData.questions);
+    setQuestions(shuffleQuestions(questionsData.questions));
   }, []);
+
+  // Function to shuffle the questions array
+  const shuffleQuestions = (questions) => {
+    let shuffledQuestions = [...questions];
+    for (let i = shuffledQuestions.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [shuffledQuestions[i], shuffledQuestions[j]] = [
+        shuffledQuestions[j],
+        shuffledQuestions[i],
+      ];
+    }
+    return shuffledQuestions;
+  };
 
   const handleAnswer = (isCorrect, selectedOption) => {
     if (isCorrect) setScore(score + 1);
@@ -47,7 +60,6 @@ const Quiz = () => {
     setClickedPrevious(false);
     if (currentQuestionIndex < questions.length - 1) {
       setCurrentQuestionIndex(currentQuestionIndex + 1);
-      
     }
   };
 
